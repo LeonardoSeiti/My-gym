@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>My Gym</title>
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css"
+    >
+</head>
+<body class="container">
+
+<div class="card has-background-warning has-text-black">
+    <header class="card-header">
+        <p class="card-header-title has-background-black has-text-white">Ficha de treino</p>
+    </header>
+    <div class="card-content">
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec
+            iaculis mauris.
+            <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+            <br/>
+            <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+        </div>
+    </div>
+</div>
+
+<p th:text="${split}"></p>
+
+<ul>
+    <li th:each="split : ${split}" th:text="${split}"></li>
+</ul>
+
+</body>
+</html>
